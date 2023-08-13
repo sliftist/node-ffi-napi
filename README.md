@@ -18,6 +18,8 @@ handling the translation of types across JavaScript and C, which can add reams
 of boilerplate code to your otherwise simple C. See the `example/factorial`
 for an example of this use case.
 
+**NOTE**: This fork uses a patched version of `ref-napi` due to serious performance issues found when using it intensively. This patch has been proven to be unstable in older node versions. As a result, node >=18 is required.
+
 **WARNING**: `node-ffi-napi` assumes you know what you're doing. You can pretty
 easily create situations where you will segfault the interpreter and unless
 you've got C debugger skills, you probably won't know what's going on.
